@@ -24,3 +24,11 @@ rvm rubygems wedding
 
 gem install bundler --no-ri --no-rdoc -V
 
+
+cap production deploy:check
+
+sudo rm /etc/nginx/sites-enabled/default
+mkdir -p /var/www/wedding/shared/log
+
+cap production setup
+cap production deploy

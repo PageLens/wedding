@@ -64,5 +64,6 @@ group :development do
   gem 'capistrano3-puma',           require: false
   gem 'capistrano-postgresql',      require: false
   gem 'capistrano-safe-deploy-to',  require: false
+  gem 'capistrano-secrets-yml',     require: false
 end
 
