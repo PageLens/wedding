@@ -25,6 +25,8 @@ en:
     wedding_title: "Liza + Jerry: Color the World with Love"
     description: "Welcome to the Wedding of Liza and Jerry."
     submit: "Submit"
+    next: "Next"
+    previous: "Previous"
 
   helpers:
     label:
@@ -41,6 +43,15 @@ en:
       reservation: "RSVP"
       about_us: "About Us"
       toggle_navigation: "Toggle navigation"
+
+  home:
+    index:
+      color_world_with_love: "Color the World with Love"
+      color_world_with_love_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      reserve_your_spot: "Reserve Your Spot"
+      rsvp: "RSVP"
+      save_the_date: "Save the Date"
+      time_and_location: "June 27th, 2015 at Menlo Park Presbyterian Church and Los Gatos Byington Winery"
 
   reservations:
     form:

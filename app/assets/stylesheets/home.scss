@@ -11,16 +11,24 @@ body.home {
     .carousel {
       height: 500px;
       margin-bottom: 60px;
+
+      .carousel-control {
+        background-image: none;
+      }
     }
     /* Since positioning the image, we need to help out the caption */
     .carousel-caption {
       z-index: 10;
+      margin-bottom: 40px;
     }
 
     /* Declare heights because of positioning of img element */
     .carousel .item {
       height: 500px;
       background-color: #777;
+      background-image: image-url("watercolor_1920x1080.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
     }
     .carousel-inner > .item > img {
       position: absolute;

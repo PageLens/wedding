@@ -12,7 +12,7 @@ IdentityFile ~/.ssh/deploy_at_pagelens.net
 ssh deploy@104.131.66.169
 
 sudo apt-get update
-sudo apt-get install curl git-core nginx postgresql postgresql-contrib postfix -y
+sudo apt-get install curl git-core nginx postfix -y
 
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 curl -L get.rvm.io | bash -s stable
@@ -23,12 +23,9 @@ rvm use 2.2 --default
 rvm rubygems wedding
 
 gem install bundler --no-ri --no-rdoc -V
-
+sudo rm /etc/nginx/sites-enabled/default
 
 cap production deploy:check
-
-sudo rm /etc/nginx/sites-enabled/default
-mkdir -p /var/www/wedding/shared/log
-
+cap production packages:install
 cap production setup
 cap production deploy
