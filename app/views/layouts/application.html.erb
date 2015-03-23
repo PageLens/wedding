@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<%= render "layouts/application_head" %>
+</head>
+<body class="<%= params[:controller].parameterize %> <%= params[:action].parameterize %>" role="document">
+
+  <div class="navbar-wrapper">
+    <div class="container">
+
+      <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only"><%= t('.toggle_navigation') %></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <%= link_to t("global.lizajerry"), root_path, class: 'navbar-brand' %>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <%= content_tag :li, class: current_page?(controller: 'home', action: 'index') ? 'active' : '' do %>
+                <%= link_to t('.home'), root_path %>
+              <% end %>
+              <%= content_tag :li, class: current_page?(controller: 'home', action: 'events') ? 'active' : '' do %>
+                <%= link_to t('.events'), events_path %>
+              <% end %>
+              <%= content_tag :li, class: current_page?(controller: 'home', action: 'about_us') ? 'active' : '' do %>
+                <%= link_to t('.about_us'), about_us_path %>
+              <% end %>
+              <%= content_tag :li, class:
+                current_page?(controller: 'reservations', action: 'new') ? 'active' : '' do %>
+                <%= link_to t('.reservation'), new_reservation_path %>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+
+  <%#= render 'layouts/application_alert' %>
+  <%= yield %>
+</body>
+</html>

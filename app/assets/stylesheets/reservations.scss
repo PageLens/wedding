@@ -1,0 +1,24 @@
+// Place all the styles related to the reservations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "variables";
+
+body.reservations {
+  &.new, &.create {
+    form {
+      fieldset.nested_fields {
+        &:first-of-type {
+          margin-top: 0;
+        }
+        margin-top: 40px;
+      }
+
+      @media (max-width: 768px) {
+        button[type="submit"] {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

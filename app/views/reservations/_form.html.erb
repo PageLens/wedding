@@ -1,0 +1,63 @@
+<%= form_for(@reservation, html: {class: 'form-horizontal'}) do |f| %>
+  <%= f.nested_fields_for :guests do |ff| %>
+    <div class="form-group <%= "has-error" if ff.object.errors[:name].any? %>">
+      <%= ff.label :name, class: 'col-sm-3 control-label' %>
+      <div class="col-sm-9">
+      <%= ff.text_field :name, class: 'form-control' %>
+      <%= error_text(ff, :name) %>
+      </div>
+    </div>
+    <div class="form-group <%= "has-error" if ff.object.errors[:email].any? %>">
+      <%= ff.label :email, class: 'col-sm-3 control-label' %>
+      <div class="col-sm-9">
+      <%= ff.email_field :email, class: 'form-control' %>
+      <%= error_text(ff, :email) %>
+      </div>
+    </div>
+    <div class="form-group <%= "has-error" if ff.object.errors[:state].any? %>">
+      <%= ff.label :state, class: 'col-sm-3 control-label' %>
+      <div class="col-sm-9">
+      <div class="radio">
+        <%= ff.label :state, class: '' do %>
+          <%= ff.radio_button :state, 'attend_both' %>
+          <%= t('.attend_both') %>
+        <% end %>
+      </div>
+      <div class="radio">
+        <%= ff.label :state, class: '' do %>
+          <%= ff.radio_button :state, 'ceremony_only' %>
+          <%= t('.ceremony_only') %>
+        <% end %>
+      </div>
+      <div class="radio">
+        <%= ff.label :state, class: '' do %>
+          <%= ff.radio_button :state, 'not_attend' %>
+          <%= t('.not_attend') %>
+        <% end %>
+      </div>
+      <%= error_text(ff, :state) %>
+      </div>
+    </div>
+    <div class="form-group <%= "has-error" if ff.object.errors[:dietary].any? %>">
+      <%= ff.label :dietary, class: 'col-sm-3 control-label' %>
+      <div class="col-sm-9">
+      <%= ff.text_area :dietary, class: 'form-control' %>
+      <%= error_text(ff, :dietary) %>
+      </div>
+    </div>
+    <%#= ff.remove_nested_fields_link %>
+  <% end %>
+
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-sm-9">
+    <%= f.add_nested_fields_link :guests , t('.add_guest') %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="actions col-sm-offset-3 col-sm-9">
+      <%= f.button t('global.submit'), class: 'btn btn-primary' %>
+    </div>
+  </div>
+
+<% end %>

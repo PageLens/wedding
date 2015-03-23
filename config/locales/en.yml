@@ -1,0 +1,51 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  global:
+    lizajerry: "Liza + Jerry"
+    wedding_title: "Liza + Jerry: Color the World with Love"
+    description: "Welcome to the Wedding of Liza and Jerry."
+    submit: "Submit"
+
+  helpers:
+    label:
+      guest:
+        dietary: "Food allergies or dietary restrictions"
+        email: "Email address"
+        name: Full name
+        state: "Attend"
+
+  layouts:
+    application:
+      home: "Home"
+      events: "Events"
+      reservation: "RSVP"
+      about_us: "About Us"
+      toggle_navigation: "Toggle navigation"
+
+  reservations:
+    form:
+      add_guest: "Add additional guest"
+      attend_both: "both the ceremony and reception"
+      ceremony_only: "only the ceremony"
+      not_attend: "neither"
+

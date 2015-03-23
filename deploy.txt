@@ -1,0 +1,26 @@
+ssh root@
+adduser deploy
+echo "deploy ALL=(ALL) NOPASSWD:ALL" | sudo tee --append /etc/sudoers
+sudo su deploy
+cd
+mkdir ~/.ssh
+echo "ssh-rsa DEPLOY_PUB_KEY deploy@pagelens.net" > ~/.ssh/authorized_keys
+scp ~/.ssh/deploy_at_pagelens.net deploy@162.243.146.103:~/.ssh/
+nano ~/.ssh/config
+IdentityFile ~/.ssh/deploy_at_pagelens.net
+
+ssh deploy@
+
+sudo apt-get update
+sudo apt-get install curl git-core nginx -y
+sudo apt-get install postgresql postgresql-contrib
+
+curl -L get.rvm.io | bash -s stable
+source ~/.rvm/scripts/rvm
+rvm requirements
+rvm install 2.2
+rvm use 2.2 --default
+rvm rubygems wedding
+
+gem install bundler --no-ri --no-rdoc -V
+
