@@ -1,20 +1,20 @@
-ssh root@
+ssh root@104.131.66.169
 adduser deploy
 echo "deploy ALL=(ALL) NOPASSWD:ALL" | sudo tee --append /etc/sudoers
 sudo su deploy
 cd
 mkdir ~/.ssh
 echo "ssh-rsa DEPLOY_PUB_KEY deploy@pagelens.net" > ~/.ssh/authorized_keys
-scp ~/.ssh/deploy_at_pagelens.net deploy@162.243.146.103:~/.ssh/
+scp ~/.ssh/deploy_at_pagelens.net deploy@104.131.66.169:~/.ssh/
 nano ~/.ssh/config
 IdentityFile ~/.ssh/deploy_at_pagelens.net
 
-ssh deploy@
+ssh deploy@104.131.66.169
 
 sudo apt-get update
-sudo apt-get install curl git-core nginx -y
-sudo apt-get install postgresql postgresql-contrib
+sudo apt-get install curl git-core nginx postgresql postgresql-contrib postfix -y
 
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 curl -L get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
 rvm requirements
