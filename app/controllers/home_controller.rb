@@ -3,7 +3,10 @@ class HomeController < ApplicationController
   end
 
   def events
-
+    respond_to do |format|
+      format.html
+      format.ics {render text: Event.wedding.to_ical}
+    end
   end
 
   def about_us

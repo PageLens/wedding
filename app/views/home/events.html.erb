@@ -1,0 +1,47 @@
+<div class="container main">
+  <div class="row featurette">
+    <div class="col-md-7">
+      <%= content_tag :h2, class: "featurette-heading" do %>
+        <%= t(".ceremony") %>
+        <%= content_tag :span, t(".at_menlo_park"), class: "text-muted" %>
+      <% end %>
+      <%= content_tag :p, class: "lead" do %>
+        <%= t(".ceremony_datetime") %><br>
+        <%= t(".ceremony_location") %><br>
+        <%= t(".ceremony_address")%>
+      <% end %>
+    </div>
+    <div class="col-md-5">
+      <iframe
+        frameborder="0"
+        style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?key=<%= Rails.application.secrets.google_api_key %>
+          &q=Menlo+Park+Presbyterian+Church,Menlo+Park+CA">
+      </iframe>
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7 col-lg-push-5">
+      <%= content_tag :h2, class: "featurette-heading" do %>
+        <%= t(".reception") %>
+        <%= content_tag :span, t(".at_los_gatos"), class: "text-muted" %>
+      <% end %>
+      <%= content_tag :p, class: "lead" do %>
+        <%= t(".reception_datetime") %><br>
+        <%= t(".reception_location") %><br>
+        <%= t(".reception_address")%>
+      <% end %>
+    </div>
+    <div class="col-md-5 col-lg-pull-7">
+      <iframe
+        frameborder="0"
+        style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?key=<%= Rails.application.secrets.google_api_key %>
+          &q=Byington+Winery+Vineyard,Los+Gatos+CA">
+      </iframe>
+    </div>
+  </div>
+</div>

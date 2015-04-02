@@ -4,7 +4,7 @@
 @import "variables";
 
 body.home {
-  &.index {
+  &.index, {
     margin-top: 0;
 
     /* Carousel base class */
@@ -95,6 +95,54 @@ body.home {
         line-height: 1.4;
       }
 
+      .featurette-heading {
+        font-size: 50px;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .featurette-heading {
+        margin-top: 120px;
+      }
+    }
+
+  }
+
+  &.events {
+    .row:first-child {
+      margin-top: 80px;
+    }
+
+    .col-md-4 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    h2 {
+      font-weight: normal;
+    }
+
+    iframe {
+      width: 450px;
+      height: 450px;
+    }
+
+    .col-md-4 p {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+    .featurette-divider {
+      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+    @media (min-width: 768px) {
       .featurette-heading {
         font-size: 50px;
       }

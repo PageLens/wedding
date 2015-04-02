@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/icalendar/icalendar.git
+  revision: b699701bc9988f7b6bfa17c6b0e26637b3e6ce87
+  specs:
+    icalendar (2.2.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -283,6 +289,7 @@ DEPENDENCIES
   factory_girl_rails
   friendly_id
   guard-rspec
+  icalendar!
   jbuilder (~> 2.0)
   jquery-rails
   nested_form_fields

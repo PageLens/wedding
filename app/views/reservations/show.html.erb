@@ -1,9 +1,17 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Slug:</strong>
-  <%= @reservation.slug %>
-</p>
-
-<%= link_to 'Edit', edit_reservation_path(@reservation) %> |
-<%= link_to 'Back', reservations_path %>
+<div class="carousel slide">
+  <div class="item">
+    <div class="container">
+      <div class="carousel-caption">
+        <%= content_tag :h1, t(".thank_you") %>
+        <%= content_tag :p, t(".description") %>
+        <%= content_tag :p do %>
+          <%= content_tag :em, t(".signature") %>
+        <% end %>
+        <%= content_tag :p do %>
+          <%= link_to(t(".save_to_calendar"), events_path(format: :ics), class: "btn btn-primary") %>
+          <%= link_to(t(".update_your_reservation"), edit_reservation_path(@reservation), class: "btn btn-primary") %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
