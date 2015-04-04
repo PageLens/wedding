@@ -1,0 +1,38 @@
+<div id="hero-carousel" class="carousel slide" data-ride="carousel">
+  <% places = ["highschool", "berkeley", "sf", "monterey", "napa", "vegas", "argentina", "london", "italy", "peru", "chile", "engagement"] %>
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#hero-carousel" data-slide-to="0" class="active"></li>
+    <% places.size.times do |i| %>
+      <li data-target="#hero-carousel" data-slide-to="<%= i+1 %>"></li>
+    <% end %>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div id="story" class="item active">
+      <div class="container">
+        <div class="carousel-caption">
+          <%= content_tag :h1, t(".story") %>
+          <%= content_tag :p, t(".story_description") %>
+        </div>
+      </div>
+    </div>
+    <% places.each do |place| %>
+      <div id="<%= place %>" class="item">
+        <div class="container">
+          <div class="carousel-caption">
+            <%= content_tag :h1, t(".#{place}") %>
+            <%= content_tag :p, t(".#{place}_description") %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <a class="left carousel-control" href="#hero-carousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only"><%= t("global.previous") %></span>
+  </a>
+  <a class="right carousel-control" href="#hero-carousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only"><%= t("global.next") %></span>
+  </a>
+</div><!-- /.carousel -->
