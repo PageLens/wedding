@@ -162,111 +162,114 @@ body.home {
 
   &.about_us {
     padding-bottom: 0;
+    height: 100%;
+
+    .fill{
+      width:100%;
+      height:100%;
+      background-position:center;
+      background-size:cover;
+      padding: 0
+    }
 
     /* Carousel base class */
+
     .carousel {
-      height: 500px;
-      // margin-bottom: 60px;
+      // height: 500px;
+      height: 100%;
 
       .carousel-control {
         background-image: none;
       }
+
+      .carousel-inner {
+        height: 100%;
+      }
+
+      div.active {
+        height:100%;
+      }
+
+      .item {
+        height: 100%;
+        // height: 500px;
+        // background: #777 no-repeat center center fixed;
+        background-color: $white;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+
+        &#story {
+          background-image: image-url("story.jpg");
+        }
+
+        &#highschool {
+          background-image: image-url("highschool.jpg");
+        }
+
+        &#monterey {
+          background-image: image-url("monterey.jpg");
+        }
+
+        &#argentina {
+          background-image: image-url("argentina.jpg");
+        }
+
+        &#berkeley {
+          background-image: image-url("berkeley.jpg");
+        }
+
+        &#chile {
+          background-image: image-url("chile.jpg");
+        }
+
+        &#engagement {
+          background-image: image-url("engagement.jpg");
+        }
+
+        &#italy {
+          background-image: image-url("italy.jpg");
+        }
+
+        &#london {
+          background-image: image-url("london.jpg");
+        }
+
+        &#napa {
+          background-image: image-url("napa.jpg");
+        }
+
+        &#peru {
+          background-image: image-url("peru.jpg");
+        }
+
+        &#sf {
+          background-image: image-url("sf.jpg");
+        }
+
+        &#vatican {
+          background-image: image-url("vatican.jpg");
+        }
+
+        &#vegas {
+          background-image: image-url("vegas.jpg");
+        }
+      }
     }
+
     /* Since positioning the image, we need to help out the caption */
     .carousel-caption {
       z-index: 10;
       margin-bottom: 40px;
     }
 
-    /* Declare heights because of positioning of img element */
-    .carousel .item {
-      height: 500px;
-      // background: #777 no-repeat center center fixed;
-      // background: image-url("highschool.jpg") no-repeat center center fixed;
-      background-color: $white;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-position: center;
-      background-size: cover;
-
-      &#story {
-        background-image: image-url("story.jpg");
-      }
-
-      &#highschool {
-        background-image: image-url("highschool.jpg");
-      }
-
-      &#monterey {
-        background-image: image-url("monterey.jpg");
-      }
-
-      &#argentina {
-        background-image: image-url("argentina.jpg");
-      }
-
-      &#berkeley {
-        background-image: image-url("berkeley.jpg");
-      }
-
-      &#chile {
-        background-image: image-url("chile.jpg");
-      }
-
-      &#engagement {
-        background-image: image-url("engagement.jpg");
-      }
-
-      &#italy {
-        background-image: image-url("italy.jpg");
-      }
-
-      &#london {
-        background-image: image-url("london.jpg");
-      }
-
-      &#napa {
-        background-image: image-url("napa.jpg");
-      }
-
-      &#peru {
-        background-image: image-url("peru.jpg");
-      }
-
-      &#sf {
-        background-image: image-url("sf.jpg");
-      }
-
-      &#vatican {
-        background-image: image-url("vatican.jpg");
-      }
-
-      &#vegas {
-        background-image: image-url("vegas.jpg");
-      }
-    }
-
-    .carousel-inner > .item > img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      height: 500px;
-    }
-
     @media (min-width: 768px) {
       margin-top: 0;
+      background-color: #222;
 
       .navbar {
         background-color: rgba(248, 248, 248, 0.5)
-      }
-
-      .carousel {
-        height: 700px;
-      }
-
-      .carousel .item {
-        height: 700px;
       }
 
       .carousel-caption p {

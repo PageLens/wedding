@@ -17,7 +17,12 @@
 @import "variables";
 @import "bootstrap";
 
+html {
+  height: 100%;
+}
+
 body {
+  min-height: 100%;
   padding-bottom: 40px;
   margin-top: 50px;
 
