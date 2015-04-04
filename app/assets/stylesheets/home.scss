@@ -5,8 +5,6 @@
 
 body.home {
   &.index, {
-    margin-top: 0;
-
     /* Carousel base class */
     .carousel {
       height: 500px;
@@ -75,6 +73,8 @@ body.home {
     -------------------------------------------------- */
 
     @media (min-width: 768px) {
+      margin-top: 0;
+
       .navbar-inverse {
         background-color: rgba(16, 16, 16, 0.7);
         border-color: darken(rgba(16, 16, 16, 0.5), 10%);
@@ -86,6 +86,10 @@ body.home {
         .navbar-brand {
           color: $white;
         }
+      }
+
+      .navbar {
+        background-color: rgba(248, 248, 248, 0.5)
       }
 
       /* Bump up size of carousel content */
@@ -157,12 +161,11 @@ body.home {
   }
 
   &.about_us {
-    margin-top: 0;
     padding-bottom: 0;
 
     /* Carousel base class */
     .carousel {
-      height: 800px;
+      height: 500px;
       // margin-bottom: 60px;
 
       .carousel-control {
@@ -177,7 +180,7 @@ body.home {
 
     /* Declare heights because of positioning of img element */
     .carousel .item {
-      height: 800px;
+      height: 500px;
       // background: #777 no-repeat center center fixed;
       // background: image-url("highschool.jpg") no-repeat center center fixed;
       background-color: $white;
@@ -252,8 +255,22 @@ body.home {
     }
 
     @media (min-width: 768px) {
+      margin-top: 0;
+
+      .navbar {
+        background-color: rgba(248, 248, 248, 0.5)
+      }
+
+      .carousel {
+        height: 700px;
+      }
+
+      .carousel .item {
+        height: 700px;
+      }
+
       .carousel-caption p {
-        margin-bottom: 20px;
+        margin-bottom: 40px;
         font-size: 21px;
         line-height: 1.4;
       }
