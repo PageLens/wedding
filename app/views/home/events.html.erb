@@ -10,6 +10,9 @@
         <%= t(".ceremony_location") %><br>
         <%= t(".ceremony_address")%>
       <% end %>
+      <%= content_tag :p do %>
+        <%= link_to t(".save_to_calendar"), events_path(format: :ics), class: "btn btn-default" %>
+      <% end %>
     </div>
     <div class="col-md-5">
       <iframe
@@ -32,6 +35,9 @@
         <%= t(".reception_datetime") %><br>
         <%= t(".reception_location") %><br>
         <%= t(".reception_address")%>
+      <% end %>
+      <%= content_tag :p do %>
+        <%= link_to t(".save_to_calendar"), events_path(format: :ics), class: "btn btn-default" %>
       <% end %>
     </div>
     <div class="col-md-5 col-lg-pull-7">

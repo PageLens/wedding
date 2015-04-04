@@ -84,6 +84,7 @@ en:
       reception_datetime: "June 27th, 2015 4:30pm"
       reception_location: "Byington Winery & Vineyard"
       reception_address: "21850 Bear Creek Rd, Los Gatos, California"
+      save_to_calendar: "Save to calendar"
 
     index:
       color_world_with_love: "Color the World with Love"
