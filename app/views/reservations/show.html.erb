@@ -8,7 +8,7 @@
           <%= content_tag :em, t(".signature") %>
         <% end %>
         <%= content_tag :p do %>
-          <%= link_to(t(".save_to_calendar"), events_path(format: :ics, state: @reservation.guests.first.state), class: "btn btn-primary") unless @reservation.guests.first.state == 'not_attend'  %>
+          <%= link_to(t(".save_to_calendar"), events_path(format: :ics, class: "btn btn-primary") unless @reservation.guests.first.state == 'not_attend'  %>
           <%= link_to(t(".update_your_reservation"), edit_reservation_path(@reservation), class: "btn btn-primary") %>
         <% end %>
       </div>

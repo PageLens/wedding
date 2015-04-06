@@ -1,8 +1,7 @@
 require 'icalendar/tzinfo'
 
 class Event
-  def self.wedding(type=:attend_both)
-    type = type.to_sym
+  def self.wedding
     cal = Icalendar::Calendar.new
 
     tzid = "America/Los_Angeles"
@@ -19,7 +18,7 @@ class Event
       e.location    = "Menlo Park Presbyterian Church, 950 Santa Cruz Ave, Menlo Park, CA"
       # e.organizer   = "mailto:lizawlm@gmail.com"
       # e.organizer   = Icalendar::Values::CalAddress.new("mailto:lizawlm@gmail.com", cn: 'Liza & Jerry')
-    end if type == :attend_both or type == :ceremony_only
+    end
     cal.event do |e|
       e.dtstart     = Icalendar::Values::DateTime.new(Time.zone.local(2015, 6, 27, 16, 30), 'tzid' => tzid)
       e.dtend       = Icalendar::Values::DateTime.new(Time.zone.local(2015, 6, 27, 22, 00), 'tzid' => tzid)
@@ -29,7 +28,7 @@ class Event
       e.location    = "Byington Winery & Vineyard, 21850 Bear Creek Rd, Los Gatos, CA"
       # e.organizer   = "mailto:lizawlm@gmail.com"
       # e.organizer   = Icalendar::Values::CalAddress.new("mailto:lizawlm@gmail.com", cn: 'Liza & Jerry')
-    end if type == :attend_both
+    end
     cal
   end
 end

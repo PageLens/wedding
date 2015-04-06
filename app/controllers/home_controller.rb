@@ -5,7 +5,7 @@ class HomeController < ApplicationController
   def events
     respond_to do |format|
       format.html
-      format.ics {render text: Event.wedding(params[:state] || :both).to_ical}
+      format.ics {render text: Event.wedding.to_ical}
     end
   end
 

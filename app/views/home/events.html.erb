@@ -11,7 +11,7 @@
         <%= t(".ceremony_address")%>
       <% end %>
       <%= content_tag :p do %>
-        <%= link_to t(".save_to_calendar"), events_path(format: :ics), class: "btn btn-default" %>
+        <%= link_to t(".save_to_calendar"), events_path(format: :ics), class: "btn btn-default ical-link" %>
       <% end %>
     </div>
     <div class="col-md-5">
