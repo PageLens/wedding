@@ -1,10 +1,9 @@
 FactoryGirl.define do
   factory :guest do
-    reservation nil
-name "MyString"
-email "MyString"
-state 1
-dietary "MyString"
+    reservation
+    sequence(:name) { |n| "Name#{n}" }
+    sequence(:email) { |n| "email#{n}@example.com" }
+    state "attend_both"
   end
 
 end

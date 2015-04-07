@@ -15,6 +15,11 @@ require "sprockets/railtie"
 Bundler.require(*Rails.groups)
 
 module Wedding
+  HOST = case Rails.env
+  when "development" then "http://localhost:3000"
+  else "http://lizaandjerry.com"
+  end
+
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

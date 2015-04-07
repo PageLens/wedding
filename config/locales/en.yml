@@ -94,6 +94,10 @@ en:
       save_the_date: "Save the Date"
       time_and_location: "June 27th, 2015 at Menlo Park Presbyterian Church and Los Gatos Byington Winery"
 
+  guest_mailer:
+    confirmation:
+      subject: "Your reservation at Liza and Jerry's wedding"
+
   reservations:
     form:
       add_guest: "Add additional guest"
