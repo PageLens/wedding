@@ -78,7 +78,11 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.action_mailer.smtp_settings = {
-    :address => 'localhost',
-    :enable_starttls_auto => false
+    :address => 'email-smtp.us-west-2.amazonaws.com',
+    :port => 587,
+    :authentication => :login,
+    :user_name => 'AKIAJVPARLJQOHJN27IQ',
+    :password => 'Atdbjh/Y/mrQCcMDD3kwAhV3Y2SBtffmcNMT6NF4ICmf',
+    :enable_starttls_auto => true
   }
 end
