@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   get 'events' => 'home#events'
   get 'about_us' => 'home#about_us', as: :about_us
+  get 'dylan' => 'home#dylan', as: :dylan
 
   resources :reservations
 

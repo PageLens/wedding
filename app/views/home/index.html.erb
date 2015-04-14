@@ -46,7 +46,7 @@
   <!-- Three columns of text below the carousel -->
   <div class="row">
     <div class="col-md-4">
-      <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+    <%= image_tag "rsvp.jpg", class: "img-circle", size: "140x140" %>
       <%= content_tag :h2, t(".rsvp") %>
       <%= content_tag :p, t(".rsvp_description") %>
       <%= content_tag :p do %>
@@ -54,7 +54,7 @@
       <% end %>
     </div>
     <div class="col-md-4">
-      <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+      <%= image_tag "about_us.jpg", class: "img-circle", size: "140x140" %>
       <%= content_tag :h2, t(".our_story") %>
       <%= content_tag :p, t(".our_story_description") %>
       <%= content_tag :p do %>
@@ -62,61 +62,11 @@
       <% end %>
     </div>
     <div class="col-md-4">
-      <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+      <%= image_tag "dylan.png", class: "img-circle", size: "140x140" %>
       <%= content_tag :h2, t(".speaker") %>
       <%= content_tag :p, t(".speaker_description") %>
       <%= content_tag :p do %>
-        <%= link_to t(".speaker_action"), new_reservation_path, class: "btn btn-default" %>
+        <%= link_to t(".speaker_action"), dylan_path, class: "btn btn-default" %>
       <% end %>
     </div>
   </div><!-- /.row -->
-
-
-  <!-- START THE FEATURETTES -->
-
-  <hr class="featurette-divider">
-
-  <div class="row featurette">
-    <div class="col-md-7">
-      <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-    </div>
-    <div class="col-md-5">
-      <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-    </div>
-  </div>
-
-  <hr class="featurette-divider">
-
-  <div class="row featurette">
-    <div class="col-md-7 col-md-push-5">
-      <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-    </div>
-    <div class="col-md-5 col-md-pull-7">
-      <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-    </div>
-  </div>
-
-  <hr class="featurette-divider">
-
-  <div class="row featurette">
-    <div class="col-md-7">
-      <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-    </div>
-    <div class="col-md-5">
-      <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-    </div>
-  </div>
-
-  <hr class="featurette-divider">
-
-  <!-- /END THE FEATURETTES -->
-
-
-  <!-- FOOTER -->
-  <footer>
-    <!-- <p class="pull-right"><a href="#">Back to top</a></p> -->
-    <p>&copy; <%= Time.zone.now.year %> <%= t("global.lizajerry") %></p>
-  </footer>
