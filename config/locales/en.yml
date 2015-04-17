@@ -76,7 +76,11 @@ en:
     dylan:
       dylan_wilk: "Dylan Wilk"
       tagline: "Global Social Entrepreneur"
-      description: "Liza has met Dylan a few times listening to his inspiring sharings.  Dylan was a very successful entrepreneur in UK, years ago he’s decided to dedicate his life to solving the poverty problems in Philippines.  He’ll be flying over to attend our wedding as guest speaker to share with us his stories of social entrepreneurship, and many inspiring and ground breaking vision and business practices."
+      dylan_paragraph1: "Dylan was born to a poor family in England. At the age of 20, he was granted an interest-free loan of £2500 by the Prince's Trust and started Gameplay, a business selling computer games. After five years, he had built Europe's largest direct selling computer games business."
+      dylan_paragraph2: "When Dylan was 25, Gameplay was listed on the London Stock Exchange, the first .com business on the LSE, making him the youngest director of a public company in the UK at that time and the 9th of 30 (according to The Guardian newspaper). He bought himself a Ferrari, a Porsche, several BMWs and traveled to work by helicopter. But despite his high flying life, he wasn't happy."
+      dylan_paragraph3: "Dylan decided to seek something more meaningful and so he traveled the world in search of adventure and purpose. It was a Filipino friend who finally led him to what he was searching for. After hearing about Gawad Kalinga, a slum redevelopment program, he flew to the Philippines in January 2003 for a closer look and was astonished by what he saw."
+      dylan_paragraph4: "In April 2003, Dylan returned to the Philippines planning to stay for only 6 weeks, yet 10 years later, he is still there. He spent 5 years coordinating Gawad Kalinga's international partnership efforts, then in November 2008, he started Human Nature, a social enterprise, with his wife Anna and sister-in-law Camille Meloto."
+      dylan_paragraph5: "Human Nature produces natural, Philippine-made personal care products and aims to provide livelihood for 100's of poor communities. As of September 2013, Human Nature had 26 branches in the Philippines, as well as distribution in the USA, Malaysia, Singapore and the UAE and had sold more than 10 million products in the last four years."
 
     events:
       ceremony: "Ceremony"
@@ -93,17 +97,17 @@ en:
 
     index:
       color_world_with_love: "Color the World with Love"
-      color_world_with_love_description: "We believe in the power of love, as we’re grateful to receive loves and cares from each of you in our life journey.  We hope the special wedding day not only celebrates our marriage, it would also be a meaningful occasion to inspire all of us to spread love further to make the world a more colorful joyful place."
+      color_world_with_love_description: "We believe in the power of love, as we're grateful to receive loves and cares from each of you in our life journey.  We hope the special wedding day not only celebrates our marriage, it would also be a meaningful occasion to inspire all of us to spread love further to make the world a more colorful joyful place."
       our_story: "Our Story"
-      our_story_description: "Life is full of miracles. We’ve known each other for 17 years and have been very good friends all along despite geographically apart. We’re grateful that we’ll be united as wive and husband soon on top of being soul-mates and best friends throughout the times."
+      our_story_description: "Life is full of miracles. We've known each other for 17 years and have been very good friends all along despite geographically apart. We're grateful that we'll be united as wive and husband soon on top of being soul-mates and best friends throughout the times."
       our_story_action: "More about our story"
       reserve_your_spot: "Reserve Your Spot"
       rsvp: "RSVP"
-      rsvp_description: "We hope to spend the entire special day with you together. Our church ceremony will start 12:30pm in Menlo Park, and then we’ve prepared some special activities with you together starting 4:30pm in a vineyard in Los Gatos."
+      rsvp_description: "We hope to spend the entire special day with you together. Our church ceremony will start 12:30pm in Menlo Park, and then we've prepared some special activities with you together starting 4:30pm in a vineyard in Los Gatos."
       rsvp_action: "Make RSVP"
       save_the_date: "Save the Date"
       speaker: "Dylan Wilk"
-      speaker_description: "Liza has met Dylan a few times listening to his inspiring sharings. Dylan was a very successful entrepreneur in UK, years ago he’s decided to dedicate his life to solving the poverty problems in Philippines."
+      speaker_description: "To echo our theme 'Color the World with Love', we've invited Dylan to share with us his social entrepreneurship journey.  You'll be amazed by the vision, big hearts and ground-making business practices to help resolving the poverty issues in Philippines."
       speaker_action: "Learn more about Dylan"
       time_and_location: "June 27th, 2015 at Menlo Park Presbyterian Church and Los Gatos Byington Winery"
 
