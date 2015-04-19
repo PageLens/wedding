@@ -82,7 +82,7 @@ Rails.application.configure do
     :port => 587,
     :authentication => :login,
     :user_name => 'AKIAJYU6JLGDLNRRGB4Q',
-    :password => Rails.application.secrets.aws_smtp_password,
+    :password => 'Au71nRl87gCrL5CctJCfOwJ5hcSKQyxQmsMOslff8mez',
     :enable_starttls_auto => true
   }
 end
