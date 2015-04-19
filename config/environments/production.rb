@@ -81,8 +81,8 @@ Rails.application.configure do
     :address => 'email-smtp.us-west-2.amazonaws.com',
     :port => 587,
     :authentication => :login,
-    :user_name => 'AKIAJVPARLJQOHJN27IQ',
-    :password => 'Atdbjh/Y/mrQCcMDD3kwAhV3Y2SBtffmcNMT6NF4ICmf',
+    :user_name => 'AKIAJYU6JLGDLNRRGB4Q',
+    :password => Rails.application.secrets.aws_smtp_password,
     :enable_starttls_auto => true
   }
 end
