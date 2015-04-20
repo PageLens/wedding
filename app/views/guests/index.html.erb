@@ -1,0 +1,44 @@
+<div class="container">
+  <%= content_tag :h2, "Summary" %>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Total Reply</th>
+        <th>Attend Both</th>
+        <th>Attend Ceremony</th>
+        <th>Not Attend</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td><%= @guests.size %></td>
+      <td><%= @guests.select{|g| g.state == 'attend_both'}.size %></td>
+      <td><%= @guests.select{|g| g.state == 'ceremony_only'}.size %></td>
+      <td><%= @guests.select{|g| g.state == 'not_attend'}.size %></td>
+    </tr>
+  </tbody>
+  </table>
+  <%= content_tag :h2, "Guest List" %>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Reservation ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Reply</th>
+        <th>Dietary</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @guests.each do |guest| %>
+      <tr>
+        <td><%= guest.reservation_id %></td>
+        <td><%= guest.name %></td>
+        <td><%= guest.email %></td>
+        <td><%= guest.state %></td>
+        <td><%= guest.dietary %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  </table>
+</div>

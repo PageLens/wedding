@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'dylan' => 'home#dylan', as: :dylan
 
   resources :reservations
+  resources :guests
 
   root 'home#index'
 
