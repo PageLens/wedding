@@ -2,7 +2,7 @@ class Reservation < ActiveRecord::Base
   extend FriendlyId
 
   has_many :guests, dependent: :destroy
-  accepts_nested_attributes_for :guests, allow_destroy: true
+  accepts_nested_attributes_for :guests, allow_destroy: true, reject_if: proc { |attributes| attributes['name'].blank? }
 
   friendly_id :name, use: :slugged
 
