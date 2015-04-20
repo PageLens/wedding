@@ -32,7 +32,7 @@
     <tbody>
     <% @guests.each do |guest| %>
       <tr>
-        <td><%= guest.reservation_id %></td>
+        <td><%= link_to guest.reservation_id, edit_reservation_path(guest.reservation) if guest.reservation %></td>
         <td><%= guest.name %></td>
         <td><%= guest.email %></td>
         <td><%= guest.state %></td>
