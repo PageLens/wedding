@@ -77,12 +77,22 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  # config.action_mailer.smtp_settings = {
+  #   :address => 'email-smtp.us-west-2.amazonaws.com',
+  #   :port => 587,
+  #   :authentication => :login,
+  #   :user_name => 'AKIAJYU6JLGDLNRRGB4Q',
+  #   :password => Rails.application.secrets.aws_smtp_password,
+  #   :enable_starttls_auto => true
+  # }
+
   config.action_mailer.smtp_settings = {
-    :address => 'email-smtp.us-west-2.amazonaws.com',
+    :address => 'smtp.gmail.com',
     :port => 587,
-    :authentication => :login,
-    :user_name => 'AKIAJYU6JLGDLNRRGB4Q',
-    :password => Rails.application.secrets.aws_smtp_password,
+    :domain => 'gmail.com',
+    :authentication => :plain,
+    :user_name => 'lizaandjerry@gmail.com',
+    :password => Rails.application.secrets.gmail_smtp_password,
     :enable_starttls_auto => true
   }
 end
