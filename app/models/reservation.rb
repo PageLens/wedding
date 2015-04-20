@@ -6,6 +6,7 @@ class Reservation < ActiveRecord::Base
 
   friendly_id :name, use: :slugged
 
+  before_validation :remove_guests_on_update
   validates :guests, presence: true
   validate :ensure_at_least_first_guest_has_email
   after_create :deliver_mails
@@ -26,6 +27,12 @@ private
   def deliver_mails
     self.guests.each do |guest|
       GuestMailer.confirmation(guest).deliver_later if guest.email.present?
+    end
+  end
+
+  def remove_guests_on_update
+    if persisted?
+      Guest.where(reservation_id: self.id).delete_all
     end
   end
 
