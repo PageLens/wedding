@@ -46,7 +46,7 @@
   <!-- Three columns of text below the carousel -->
   <div class="row">
     <div class="col-md-4">
-    <%= image_tag "rsvp.jpg", class: "img-circle", size: "140x140" %>
+      <%= link_to image_tag("rsvp.jpg", class: "img-circle", size: "140x140"), events_path %>
       <%= content_tag :h2, t(".rsvp") %>
       <%= content_tag :p, t(".rsvp_description") %>
       <%= content_tag :p do %>
@@ -54,7 +54,7 @@
       <% end %>
     </div>
     <div class="col-md-4">
-      <%= image_tag "about_us.jpg", class: "img-circle", size: "140x140" %>
+      <%= link_to image_tag("about_us.jpg", class: "img-circle", size: "140x140"), about_us_path %>
       <%= content_tag :h2, t(".our_story") %>
       <%= content_tag :p, t(".our_story_description") %>
       <%= content_tag :p do %>
@@ -62,7 +62,7 @@
       <% end %>
     </div>
     <div class="col-md-4">
-      <%= image_tag "dylan.png", class: "img-circle", size: "140x140" %>
+      <%= link_to image_tag("dylan.png", class: "img-circle", size: "140x140"), dylan_path %>
       <%= content_tag :h2, t(".speaker") %>
       <%= content_tag :p, t(".speaker_description") %>
       <%= content_tag :p do %>
