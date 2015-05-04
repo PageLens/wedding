@@ -19,8 +19,14 @@
       <div class="col-sm-9">
       <div class="radio">
         <%= ff.label :state, class: '' do %>
-          <%= ff.radio_button :state, 'attend_both' %>
-          <%= t('.attend_both') %>
+          <% if Guest.count > 120 %>
+            <%= ff.radio_button :state, 'attend_both', disabled: true %>
+            <%= t('.attend_both') %>
+            <%= t('.full') %>
+          <% else %>
+            <%= ff.radio_button :state, 'attend_both' %>
+            <%= t('.attend_both') %>
+          <% end %>
         <% end %>
       </div>
       <div class="radio">
