@@ -152,7 +152,7 @@ RSpec.describe ReservationsController, type: :controller do
     it "redirects to the reservations list" do
       reservation = Reservation.create! valid_attributes
       delete :destroy, {:id => reservation.to_param}, valid_session
-      expect(response).to redirect_to(reservations_url)
+      expect(response).to redirect_to(guests_url)
     end
   end
 
