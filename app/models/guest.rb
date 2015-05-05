@@ -1,6 +1,6 @@
 class Guest < ActiveRecord::Base
   enum state: [:attend_both, :ceremony_only, :not_attend]
-  auto_strip_attributes :name, :email, :dietary
+  auto_strip_attributes :name, :email, :dietary, :note
 
   belongs_to :reservation
 
