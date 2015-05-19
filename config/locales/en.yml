@@ -119,7 +119,9 @@ en:
   photos:
     new:
       title: "Title"
-      upload_file: "Upload Picture"
+      drag_and_drop_pictures: "Drag and drop pictures to here"
+      or: "or"
+      choose_pictures: "or Click to choose pictures"
       submit: "Submit"
       template_uploading: "Uploading '%{name}'"
       template_uploaded: "'%{name}' is uploaded"

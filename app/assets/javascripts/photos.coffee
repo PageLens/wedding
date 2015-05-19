@@ -11,10 +11,6 @@ ready = ->
     $uploads = $('#uploads')
     photos_url = $fileupload_container.data('photos-url')
 
-    # Moves the upload form to the right position.
-    # $fileupload_container.css(top: $fileupload_form_container.position().top)
-    # $fileupload_container.show()
-
     $fileupload.fileupload
       add: (e, data) ->
         $fileupload_result.find('.status').remove() # remove previous upload message

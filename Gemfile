@@ -45,6 +45,7 @@ gem 'roadie-rails'
 gem 'exception_notification'
 gem 'jquery-fileupload-rails'
 gem 'aws-sdk'
+gem 'mini_magick'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

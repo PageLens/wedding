@@ -1,0 +1,21 @@
+<div class="container">
+<%= content_tag :div, class: 'page-header' do %>
+  <%= content_tag :h1 do %>
+    Photos
+  <% end %>
+<% end %>
+
+<%= content_tag :div, class: "row" do %>
+  <% @photos.each do |photo| %>
+    <%= content_tag :div, class: "col-sm-6 col-md-4" do %>
+      <div class="thumbnail">
+        <%= image_tag photo.thumb_url %>
+        <p>
+          <%= link_to "Download", photo.url, class: 'btn btn-primary' %>
+        </p>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+<%= pagination_for(@photos) %>
+</div>

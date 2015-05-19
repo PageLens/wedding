@@ -8,9 +8,11 @@
   </div>
   <div id="uploads" class="row">
   </div>
-
   <%= content_tag :div, id: "fileupload-container", data: {photos_url: photos_url} do %>
-    <%= button_tag t(".upload_file"), class: "btn btn-primary" %>
+    <div class="upload-target text-center well">
+      <p class="lead"><%= t(".drag_and_drop_pictures") %></p>
+      <%= button_tag t(".choose_pictures"), class: "btn btn-lg btn-primary" %>
+    </div>
     <%= s3_uploader_form post: photos_url,
       content_encoding_starts_with: '',
       bucket: Wedding::S3_BUCKET,
@@ -36,7 +38,7 @@
 
 <script id="template-uploaded" type="text/x-tmpl">
 <div class="thumbnail" data-url="{%=o.photo_url%}">
-  <img src="{%=o.url%}">
+  <img src="{%=o.thumb_url%}">
   <div class="caption">
     <h4><%= t(".template_uploaded", name: "{%=o.name%}") %></h4>
   </div>

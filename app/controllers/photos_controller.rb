@@ -1,6 +1,10 @@
 class PhotosController < ApplicationController
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
 
+  def index
+    @photos = Photo.paginate(page: params[:page], per_page: 12)
+  end
+
   def new
     @photo = Photo.new
   end
