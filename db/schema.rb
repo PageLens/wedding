@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150505201328) do
+ActiveRecord::Schema.define(version: 20150518165248) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,18 @@ ActiveRecord::Schema.define(version: 20150505201328) do
   end
 
   add_index "guests", ["reservation_id"], name: "index_guests_on_reservation_id", using: :btree
+
+  create_table "photos", force: :cascade do |t|
+    t.string   "creator"
+    t.string   "title"
+    t.string   "s3_key",       limit: 2048, null: false
+    t.string   "url",          limit: 2048
+    t.datetime "processed_at"
+    t.string   "thumb_s3_key", limit: 2048
+    t.string   "thumb_url",    limit: 2048
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
 
   create_table "reservations", force: :cascade do |t|
     t.string   "slug",       null: false

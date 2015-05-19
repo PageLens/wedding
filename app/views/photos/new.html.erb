@@ -1,0 +1,44 @@
+<div class="form-container container">
+
+  <div class="page-header">
+    <%= content_tag :h1 do %>
+      Pictures for <%= content_tag :span, "Liza + Jerry", class: "text-muted" %>
+    <% end %>
+    <%= content_tag :p, t(".description"), class: "lead" %>
+  </div>
+  <div id="uploads" class="row">
+  </div>
+
+  <%= content_tag :div, id: "fileupload-container", data: {photos_url: photos_url} do %>
+    <%= button_tag t(".upload_file"), class: "btn btn-primary" %>
+    <%= s3_uploader_form post: photos_url,
+      content_encoding_starts_with: '',
+      bucket: Wedding::S3_BUCKET,
+      input_selector: '#photo_s3_key',
+      id: 'fileupload' do %>
+      <%= file_field_tag :file %>
+    <% end %>
+  <% end %>
+</div>
+
+<script id="template-uploading" type="text/x-tmpl">
+<div class="col-sm-6 col-md-4">
+  <div class="thumbnail">
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped active" style="width: 0%"></div>
+    </div>
+    <div class="caption">
+      <h4><%= t(".template_uploading", name: "{%=o.name%}") %></h4>
+    </div>
+  </div>
+</div>
+</script>
+
+<script id="template-uploaded" type="text/x-tmpl">
+<div class="thumbnail" data-url="{%=o.photo_url%}">
+  <img src="{%=o.url%}">
+  <div class="caption">
+    <h4><%= t(".template_uploaded", name: "{%=o.name%}") %></h4>
+  </div>
+</div>
+</script>

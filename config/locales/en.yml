@@ -27,6 +27,7 @@ en:
     submit: "Submit"
     next: "Next"
     previous: "Previous"
+    save: "Save"
 
   helpers:
     label:
@@ -114,6 +115,15 @@ en:
   guest_mailer:
     confirmation:
       subject: "Your reservation at Liza and Jerry's wedding"
+
+  photos:
+    new:
+      title: "Title"
+      upload_file: "Upload Picture"
+      submit: "Submit"
+      template_uploading: "Uploading '%{name}'"
+      template_uploaded: "'%{name}' is uploaded"
+      description: "We want to collect pictures of us, the wedding, or any pictures you want to share with us. Thank you for contributing to our life-long album."
 
   reservations:
     form:

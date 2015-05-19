@@ -15,6 +15,8 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require nested_form_fields
+//= require jquery-fileupload/basic
+//= require jquery-fileupload/vendor/tmpl
 //= require_self
 //= require_tree .
 window.Wedding = window.Wedding || {};
