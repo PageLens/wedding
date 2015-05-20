@@ -8,6 +8,9 @@
   </div>
   <div id="uploads" class="row">
   </div>
+  <div>
+    <%= text_field_tag :creator, "", class: "form-control", placeholder: t(".your_name") %>
+  </div>
   <%= content_tag :div, id: "fileupload-container", data: {photos_url: photos_url} do %>
     <div class="upload-target text-center well">
       <p class="lead"><%= t(".drag_and_drop_pictures") %></p>

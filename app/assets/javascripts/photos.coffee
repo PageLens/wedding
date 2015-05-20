@@ -9,6 +9,7 @@ ready = ->
     $fileupload_form_container = $('#fileupload-form-container')
     $fileupload_result = $('#fileupload-result')
     $uploads = $('#uploads')
+    $creator_field = $('#creator')
     photos_url = $fileupload_container.data('photos-url')
 
     $fileupload.fileupload
@@ -43,6 +44,7 @@ ready = ->
           method: 'POST',
           data: {
             photo: {
+              creator: $creator_field.val(),
               s3_key: s3_key
             }
           },

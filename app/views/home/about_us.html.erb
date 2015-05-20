@@ -22,6 +22,7 @@
           <div class="carousel-caption">
             <%= content_tag :h1, t(".#{place}") %>
             <%= content_tag :p, t(".#{place}_description") %>
+            <%= link_to t(".upload_photo"), new_photo_path, class: 'btn btn-primary' if place == "engagement" %>
           </div>
         </div>
       </div>

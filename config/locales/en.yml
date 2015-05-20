@@ -44,6 +44,7 @@ en:
       reservation: "RSVP"
       about_us: "Our Story"
       toggle_navigation: "Toggle navigation"
+      upload_photo: "Upload Pictures"
 
   home:
     about_us:
@@ -73,6 +74,7 @@ en:
       chile_description: "And we went to the desert"
       engagement: "The story doesn't stop here"
       engagement_description: "These are just the first few chapters of our story and we are looking forward to continue our journey"
+      upload_photo: "Have pictures about us? Contribute to our album"
 
     dylan:
       dylan_wilk: "Dylan Wilk"
@@ -111,6 +113,9 @@ en:
       speaker_description: "To echo our theme 'Color the World with Love', we've invited Dylan to share with us his social entrepreneurship journey.  You'll be amazed by the vision, big hearts and ground-making business practices to help resolving the poverty issues in Philippines."
       speaker_action: "Learn more about Dylan"
       time_and_location: "June 27th, 2015 at Menlo Park Presbyterian Church and Los Gatos Byington Winery"
+      pictures: "Contribute to our Album"
+      pictures_description: "Have pictures about us? Please share with us."
+      upload_pictures: "Upload Pictures to our Album"
 
   guest_mailer:
     confirmation:
@@ -126,6 +131,7 @@ en:
       template_uploading: "Uploading '%{name}'"
       template_uploaded: "'%{name}' is uploaded"
       description: "We want to collect pictures of us, the wedding, or any pictures you want to share with us. Thank you for contributing to our life-long album."
+      your_name: "Your Name"
 
   reservations:
     form:

@@ -11,6 +11,7 @@
       <div class="thumbnail">
         <%= image_tag photo.thumb_url %>
         <div class="caption">
+          <%= content_tag :p, "From: #{photo.creator}" if photo.creator %>
           <p>
             <%= link_to "Download", photo.url, class: 'btn btn-primary' %>
           </p>
