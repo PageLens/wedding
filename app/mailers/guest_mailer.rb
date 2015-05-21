@@ -7,9 +7,12 @@ class GuestMailer < ApplicationMailer
   #
   def confirmation(guest)
     @guest = guest
-    attachments['LizaJerryWedding.ics'] = {
-      content: Event.wedding.to_ical
-    }
+    case guest.state
+    when 'attend_both'
+      attachments['LizaJerryWedding.ics'] = {content: Event.wedding.to_ical}
+    when 'ceremony_only'
+      attachments['LizaJerryWedding.ics'] = {content: Event.ceremony.to_ical}
+    end
     mail to: guest.email
   end
 end
