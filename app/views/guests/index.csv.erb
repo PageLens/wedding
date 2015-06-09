@@ -1,5 +1,5 @@
 <%- headers = ['Reservation ID', 'Name', 'Email', 'State', 'Dietary', 'Note'] -%>
-<%= CSV.generate_line headers %>
+<%= CSV.generate_line headers -%>
 <%- @guests.each do |guest| -%>
-  <%= CSV.generate_line([guest.reservation_id, guest.name, guest.email, guest.state, guest.dietary, guest.note]) %>
+<%= CSV.generate_line([guest.reservation_id, guest.name, guest.email, guest.state, guest.dietary, guest.note]) -%>
 <%- end -%>
