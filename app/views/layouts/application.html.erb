@@ -31,10 +31,6 @@
                 <%= link_to t('.about_us'), about_us_path %>
               <% end %>
               <%= content_tag :li, class:
-                current_page?(controller: 'reservations', action: 'new') ? 'active' : '' do %>
-                <%= link_to t('.reservation'), new_reservation_path %>
-              <% end %>
-              <%= content_tag :li, class:
                 current_page?(controller: 'photos', action: 'new') ? 'active' : '' do %>
                 <%= link_to t('.upload_photo'), new_photo_path %>
               <% end %>
