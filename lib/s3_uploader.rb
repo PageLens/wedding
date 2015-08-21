@@ -32,16 +32,6 @@ class S3Uploader
     }
   end
 
-  def presigned_post1
-
-    @presigned_post ||= @bucket.presigned_post({
-      key: key,
-      acl: @options[:acl],
-      expires: @options[:expiration],
-      content_length: 0..@options[:max_file_size].to_i
-    }.compact).where(:utf8).starts_with("") # without the utf8 we will get 403 error from AWS.
-  end
-
   def presigned_post
     @presigned_post ||= Aws::S3::PresignedPost.new(AWS_CRENDENTIALS, 'us-west-2', Wedding::S3_BUCKET, {
       # utf8_starts_with: '',
